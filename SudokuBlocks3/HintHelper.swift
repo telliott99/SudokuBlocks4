@@ -74,7 +74,7 @@ func removeDuplicateHints(hintList: [Hint]) -> [Hint] {
 }
 
 func displayHints() {
-    let appDelegate = NSApplication.shared().delegate as! AppDelegate
+    let appDelegate = NSApplication.shared.delegate as! AppDelegate
     let wc = appDelegate.mainWindowController
     
     if hintActive {

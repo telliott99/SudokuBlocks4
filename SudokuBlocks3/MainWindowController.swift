@@ -27,8 +27,8 @@ class MainWindowController: NSWindowController {
         popUp.addItem(withTitle: "evil")
     }
     
-    override var windowNibName: String {
-        return "MainWindowController"
+    override var windowNibName: NSNib.Name? {
+        return NSNib.Name(rawValue: "MainWindowController")
     }
     
     @IBAction func requestClean(sender: AnyObject) {
@@ -60,7 +60,7 @@ class MainWindowController: NSWindowController {
         
         resetLabelTextField()
         
-        if checkbox.state == NSOnState {
+        if checkbox.state == NSControl.StateValue.on {
             applyConstraintsForFilledSquaresOnce()
         }
         
@@ -125,7 +125,7 @@ class MainWindowController: NSWindowController {
     }
     
     @IBAction func showTextWindow(sender: AnyObject) {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
         
         if let textWindowController = appDelegate.textWindowController {
             textWindowController.showCurrentState()
@@ -134,7 +134,7 @@ class MainWindowController: NSWindowController {
     
     
     @IBAction func hideTextWindow(sender: AnyObject) {
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
         
         // not the graceful way, should ask confirmation (see docs)
         if let textWindowController = appDelegate.textWindowController {
@@ -167,7 +167,7 @@ class MainWindowController: NSWindowController {
                 popUp.selectItem(at: 0)
             }
             
-            if checkbox.state == NSOnState {
+            if checkbox.state == NSControl.StateValue.on {
                 applyConstraintsForFilledSquaresOnce()
             }
             hideHints()

@@ -10,8 +10,8 @@ class TextWindowController: NSWindowController {
         super.windowDidLoad()
     }
     
-    override var windowNibName: String {
-        return "TextWindowController"
+    override var windowNibName: NSNib.Name? {
+        return NSNib.Name(rawValue: "TextWindowController")
     }
     
     @IBAction func loadTextAsPuzzle(sender: AnyObject) {

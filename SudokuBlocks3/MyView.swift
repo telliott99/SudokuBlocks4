@@ -70,13 +70,13 @@ class MyView: NSView {
             if hintActive {
                 // couldn't figure out yet how to save this reference
                 
-                let appDelegate = NSApplication.shared().delegate as! AppDelegate
+                let appDelegate = NSApplication.shared.delegate as! AppDelegate
                 if let mwc = appDelegate.mainWindowController as MainWindowController! {
                     mwc.hideHints(sender: self)
                 }
             }
             else {
-                let appDelegate = NSApplication.shared().delegate as! AppDelegate
+                let appDelegate = NSApplication.shared.delegate as! AppDelegate
                 if let mwc = appDelegate.mainWindowController as MainWindowController! {
                     mwc.showHints()
                 }

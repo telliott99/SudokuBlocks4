@@ -57,9 +57,9 @@ func savePuzzleDataToFile(s: String) {
 
     //sp.runModal()
     
-    sp.begin(completionHandler: { (result: Int) -> Void in
+    sp.begin(completionHandler: { (result: NSApplication.ModalResponse) -> Void in
         // Swift.print(result)
-        if result == NSFileHandlingPanelOKButton {
+        if result.rawValue == NSFileHandlingPanelOKButton {
             let exportedFileURL = sp.url!
             do { try s.write(to: exportedFileURL, atomically:true,
                 encoding:String.Encoding.utf8) }

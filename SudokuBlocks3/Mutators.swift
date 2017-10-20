@@ -14,7 +14,7 @@ I'm not sure what the right way to do this is...
 probably the window controllers just need to be informed when functions return
 */
 
-let appDelegate = NSApplication.shared().delegate as! AppDelegate
+let appDelegate = NSApplication.shared.delegate as! AppDelegate
 let mainWindowController = appDelegate.mainWindowController!
 let textWindowController = appDelegate.textWindowController!
 

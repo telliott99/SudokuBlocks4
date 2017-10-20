@@ -8,7 +8,7 @@ import Cocoa
 // found the right syntax to do it from MyView
 // but other code can't call MyView functions!
 
-let ad = NSApplication.shared().delegate as! AppDelegate
+let ad = NSApplication.shared.delegate as! AppDelegate
 
 func refreshScreen() {
     // Swift.print("ScreenUtilities:  refreshScreen")

@@ -1,0 +1,89 @@
+Conversion to Swift4 seems to work OK
+
+issues:
+
+Do Convert -> ToCurrentSwiftSyntax
+(minimize inference), @objc stuff...
+
+results:
+
+NSAlertStyle 
+is now
+NSAlert.Style
+
+NSAlertFirstButtonReturn
+is now
+NSApplication.ModalResponse.alertFirstButtonReturn
+
+NSOnState 
+is now
+NSControl.StateValue.on
+
+NSApplication.shared().delegate
+is now
+NSApplication.shared.delegate
+
+NSBezierPath.setDefaultLineWidth(2)
+is now
+NSBezierPath.defaultLineWidth = 2
+
+-----------
+
+MainWindowController(windowNibName: NSNib.Name(rawValue: "MainWindowController"))
+
+
+windowNibName: NSNib.Name? {
+    return NSNib.Name(rawValue: "TextWindowController")}
+
+https://developer.apple.com/documentation/appkit/nsdocument/1515174-windownibname
+
+-----------
+
+Also EnableRecommendedWarnings
+
+Clean and Build and get some errors:
+
+2 windowNibName changes did not get made
+
+NSOnState 
+is
+NSControl.StateValue.on
+
+Clean and Build and get some more:
+completionHandler: { (result: Int) ->
+is now
+NSApplication.ModalResponse not Int
+
+so just below I need
+result.rawValue
+
+Also substring is deprecated
+
+let i = current.index(current.startIndex, offsetBy: n)
+let front = current.substring(to: i)
+ret.append(front)
+current = current.substring(from: i)
+
+is now
+
+let i = current.startIndex
+let j = current.index(i, offsetBy: n-1)
+let k = current.index(i, offsetBy: n)
+
+let front = String(current[i...j])
+ret.append(front)
+current = String(current[k...])
+
+-----------
+
+At this point, the app does run.
+
+finally:
+
+may need to add @objc
+may need to fix deprecated implicit @objc reference  (how?)
+
+in Build settings:
+set Swift 3 @objc inference to Default
+
+

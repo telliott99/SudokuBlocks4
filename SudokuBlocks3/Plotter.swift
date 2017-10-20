@@ -34,7 +34,7 @@ func plotRects(_ data: Set<Int>, rect: NSRect, key: String) {
         col.set()
         NSBezierPath.fill(rect)
         
-        NSBezierPath.setDefaultLineWidth(2)
+        NSBezierPath.defaultLineWidth = 2
         outlineColor.set()
         NSBezierPath.stroke(rect)
     }
@@ -56,7 +56,7 @@ func plotTinyRects(_ data: Set<Int>, rect: NSRect, key: String) {
         col.set()
         NSBezierPath.fill(r)
     }
-    NSBezierPath.setDefaultLineWidth(2)
+    NSBezierPath.defaultLineWidth = 2
     outlineColor.set()
     NSBezierPath.stroke(rect)
 }
@@ -81,7 +81,7 @@ func outlineHintSquares(){
     let y1 = yList.first!
     let y2 = yList.last!
     
-    NSBezierPath.setDefaultLineWidth(lineWidth)
+    NSBezierPath.defaultLineWidth = lineWidth
     let o = CGFloat(sizeD["sq"]!)
     let r = NSMakeRect(x1,y1,x2-x1+o,y2-y1+o)
     let p = NSBezierPath(rect: r)

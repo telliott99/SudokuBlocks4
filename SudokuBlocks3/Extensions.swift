@@ -73,10 +73,12 @@ extension String {
                 ret.append(current)
                 break
             }
-            let i = current.index(current.startIndex, offsetBy: n)
-            let front = current.substring(to: i)
+            let i = current.startIndex
+            let j = current.index(i, offsetBy: n-1)
+            let k = current.index(i, offsetBy: n)
+            let front = String(current[i...j])
             ret.append(front)
-            current = current.substring(from: i)
+            current = String(current[k...])
         }
         return ret
     }

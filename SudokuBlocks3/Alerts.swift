@@ -8,7 +8,7 @@ case .critical
 }
 */
 
-func runAlert(_ s: String, style: NSAlertStyle = .warning) -> Bool {
+func runAlert(_ s: String, style: NSAlert.Style = .warning) -> Bool {
     let a: NSAlert = NSAlert()
     // Swift.print(a.window.frame.origin)
     
@@ -20,7 +20,7 @@ func runAlert(_ s: String, style: NSAlertStyle = .warning) -> Bool {
     //a.addButtonWithTitle("Cancel")
     
     let result = a.runModal()
-    if result == NSAlertFirstButtonReturn {
+    if result == NSApplication.ModalResponse.alertFirstButtonReturn {
         return true
     }
     return false
