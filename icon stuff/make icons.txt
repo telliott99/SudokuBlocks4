@@ -11,7 +11,7 @@ and as the old notes say
 dragging it into the project assets in AppIcon didn't work
 I dragged the files individually, and that did work.
 
-It's tricking to bring up the right "area" to drop the files in.  Select xcassets in the Project folder, then the Icons thingie in the middle.
+It's tricky to bring up the right "area" to drop the files in.  Select xcassets in the Project folder, then the Icons thingie in the middle.
 
 Drag the individual files onto the palette.
 Build and run.  Works.
