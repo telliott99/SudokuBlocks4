@@ -65,7 +65,7 @@ extension String {
         var ret = [String]()
         var current = self
         while true {
-            let m = current.characters.count
+            let m = current.count
             if m == 0 {
                 break
             }
@@ -89,17 +89,9 @@ extension String {
         return ret.joined(separator: sep)
     }
     
-    func stripOccurrencesOfCharactersInList(cL: CharacterView) -> String {
-        /*
-        get the CharacterView, like an [Character]
-        split to chunks on newlines, takes a closure
-
-        the results are not Strings which joined requires,
-        so do the conversion for each one with map
-        */
-        
+    func stripOccurrencesOfCharactersInList(cL: String) -> String {
         var a = [Character]()
-        for c in self.characters {
+        for c in self {
             if cL.contains(c) {
                 continue
             }

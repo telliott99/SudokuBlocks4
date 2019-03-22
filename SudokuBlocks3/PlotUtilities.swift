@@ -67,8 +67,8 @@ func constructOriginDict() -> [String:(Int,Int)] {
     
     // flipped origin of MyView
     // at upper left as expected
-    for (i,l) in letters.characters.enumerated() {
-        for (j,d) in digits.characters.enumerated() {
+    for (i,l) in letters.enumerated() {
+        for (j,d) in digits.enumerated() {
             let key = String([l,d])
             D[key] = (L[j],L[i])
         }
@@ -81,8 +81,8 @@ func constructRectDict() -> [String:NSRect] {
     let D = constructOriginDict()
     let N = sizeD["N"]!
     var rD = [String:NSRect]()
-    for l in letters.characters {
-        for d in digits.characters {
+    for l in letters {
+        for d in digits {
             let k = String([l,d])
             let (x,y) = D[k]!
             let r = NSMakeRect(

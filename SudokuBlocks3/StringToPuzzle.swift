@@ -9,8 +9,8 @@ func validatedPuzzleString(_ s: String) -> String? {
     
     var a = [Character]()
     
-    let whitespace = " \n".characters
-    for c in s.characters {
+    let whitespace = " \n"
+    for c in s {
         if whitespace.contains(c) {
             continue
         }
@@ -22,7 +22,7 @@ func validatedPuzzleString(_ s: String) -> String? {
         return nil
     }
     
-    let validPuzzleChars = Set(".0123456789".characters)
+    let validPuzzleChars = Set(".0123456789")
     if !Set(a).isSubset(of: validPuzzleChars) {
         return nil
     }

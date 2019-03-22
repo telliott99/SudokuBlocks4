@@ -13,8 +13,8 @@ let orderedKeys = getOrderedKeys()
 
 func getOrderedKeys() -> [String] {
     var kL = [String]()
-    for l in letters.characters {
-        for d in digits.characters {
+    for l in letters {
+        for d in digits {
             kL.append(String([l,d]))
         }
     }

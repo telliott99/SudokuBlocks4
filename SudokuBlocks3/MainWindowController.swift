@@ -158,7 +158,7 @@ class MainWindowController: NSWindowController {
             
             resetLabelTextField()
             
-            let c = String(key.characters.first!)
+            let c = String(key.first!)
             if let i = ["z","m","h","e"].index(of: c) {
                 
                 

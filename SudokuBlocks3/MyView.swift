@@ -50,6 +50,8 @@ class MyView: NSView {
     
     // detect CMD+z, spacebar and left & right arrows
     @IBAction override func keyDown(with event: NSEvent) {
+        let appDelegate = NSApplication.shared.delegate as! AppDelegate
+        let mwc = appDelegate.mainWindowController!
         
         super.keyDown(with: event)
         // Swift.print(event.keyCode)
@@ -69,17 +71,10 @@ class MyView: NSView {
             
             if hintActive {
                 // couldn't figure out yet how to save this reference
-                
-                let appDelegate = NSApplication.shared.delegate as! AppDelegate
-                if let mwc = appDelegate.mainWindowController as MainWindowController! {
-                    mwc.hideHints(sender: self)
-                }
+                mwc.hideHints(sender: self)
             }
             else {
-                let appDelegate = NSApplication.shared.delegate as! AppDelegate
-                if let mwc = appDelegate.mainWindowController as MainWindowController! {
-                    mwc.showHints()
-                }
+                mwc.showHints()
             }
             
             refreshScreen()

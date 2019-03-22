@@ -42,13 +42,13 @@ func getRandomDatabasePuzzle(_ level: Difficulty) -> (String, String)? {
     // filter kL based on Difficulty
     switch level {
     case .easy:
-        kL = kL.filter() { $0.characters.first! == "e" }
+        kL = kL.filter() { $0.first! == "e" }
     case .medium:
-        kL = kL.filter() { $0.characters.first! == "m" }
+        kL = kL.filter() { $0.first! == "m" }
     case .hard:
-        kL = kL.filter() { $0.characters.first! == "h" }
+        kL = kL.filter() { $0.first! == "h" }
     case .evil:
-        kL = kL.filter() { $0.characters.first! == "v" }
+        kL = kL.filter() { $0.first! == "v" }
     }
     
     let i = Int(arc4random_uniform(UInt32(kL.count)))

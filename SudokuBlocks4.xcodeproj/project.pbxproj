@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		7504E62A1E2168E10086D361 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
-		75092A101E21657F00A303FC /* SudokuBlocks3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuBlocks3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75092A101E21657F00A303FC /* SudokuBlocks4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuBlocks4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75092A131E21657F00A303FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75092A151E21657F00A303FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SudokuBlocks3/Assets.xcassets; sourceTree = "<group>"; };
 		75092A181E21657F00A303FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		75092A111E21657F00A303FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				75092A101E21657F00A303FC /* SudokuBlocks3.app */,
+				75092A101E21657F00A303FC /* SudokuBlocks4.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		75092A0F1E21657F00A303FC /* SudokuBlocks3 */ = {
+		75092A0F1E21657F00A303FC /* SudokuBlocks4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 75092A1D1E21657F00A303FC /* Build configuration list for PBXNativeTarget "SudokuBlocks3" */;
+			buildConfigurationList = 75092A1D1E21657F00A303FC /* Build configuration list for PBXNativeTarget "SudokuBlocks4" */;
 			buildPhases = (
 				75092A0C1E21657F00A303FC /* Sources */,
 				75092A0D1E21657F00A303FC /* Frameworks */,
@@ -163,9 +163,9 @@
 			);
 			dependencies = (
 			);
-			name = SudokuBlocks3;
+			name = SudokuBlocks4;
 			productName = SudokuBlocks3;
-			productReference = 75092A101E21657F00A303FC /* SudokuBlocks3.app */;
+			productReference = 75092A101E21657F00A303FC /* SudokuBlocks4.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +175,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Tom Elliott";
 				TargetAttributes = {
 					75092A0F1E21657F00A303FC = {
@@ -185,8 +185,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 75092A0B1E21657F00A303FC /* Build configuration list for PBXProject "SudokuBlocks3" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 75092A0B1E21657F00A303FC /* Build configuration list for PBXProject "SudokuBlocks4" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -198,7 +198,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				75092A0F1E21657F00A303FC /* SudokuBlocks3 */,
+				75092A0F1E21657F00A303FC /* SudokuBlocks4 */,
 			);
 		};
 /* End PBXProject section */
@@ -281,6 +281,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -288,6 +289,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -320,6 +322,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Debug;
 		};
@@ -336,6 +339,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -343,6 +347,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -366,7 +371,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 			};
 			name = Release;
 		};
@@ -376,8 +383,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SudokuBlocks3/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = te.SudokuBlocks3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = te.SudokuBlocks4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -390,8 +400,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SudokuBlocks3/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = te.SudokuBlocks3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = te.SudokuBlocks4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -401,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		75092A0B1E21657F00A303FC /* Build configuration list for PBXProject "SudokuBlocks3" */ = {
+		75092A0B1E21657F00A303FC /* Build configuration list for PBXProject "SudokuBlocks4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75092A1B1E21657F00A303FC /* Debug */,
@@ -410,7 +423,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		75092A1D1E21657F00A303FC /* Build configuration list for PBXNativeTarget "SudokuBlocks3" */ = {
+		75092A1D1E21657F00A303FC /* Build configuration list for PBXNativeTarget "SudokuBlocks4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				75092A1E1E21657F00A303FC /* Debug */,
